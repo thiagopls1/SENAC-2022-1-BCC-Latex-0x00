@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void gerar_tabuada(int);
+void generateMultTable(int);
 
 int main(int argc, char *argv[]) {
     int base;
 
-    if (argc == 2)
+    if (argc == 2){
         base = atoi(argv[1]);
-    else 
+    }
+    else{
         base = 2;
-  
-    gerar_tabuada(base);
+    } 
+    generateMultTable(base);
 
     exit(EXIT_SUCCESS);
 }
 
-void gerar_tabuada(int base) {
-    const char *arquivo = "tabela.tex";
+void generateMultTable(int base) {
+    const char *archive = "tabela.tex";
 
-    FILE * fp = fopen(arquivo,"wt");
+    FILE * fp = fopen(archive,"wt");
     if (fp == NULL)
         return;
 
